@@ -3,6 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <title>Weather App</title>
+    <link rel="stylesheet" th:href="@{/background.css}" />
+    
+    <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
 </head>
@@ -72,19 +75,27 @@
         </div>
 <!-- -->
 <script>
+    // var api = "http://api.openweathermap.org/data/2.5/weather?zip=" + zipCode + "&units=imperial&appid=3874ba64c15c3a576a52afc64374f3a0";
       $(document).ready(function(){ 
-    var weatherMain = data.weather[0].description;
-
-            if (weatherMain == "Rain") {
-                $("body").css("background-image", "url('http://i.imgur.com/xPhZpAd.jpg')");
+    var weatherMain =data.weather[0].get('description');
+    console.log(weatherMain);
+    $("#weatherMain").html(weatherMain);
+            if (weatherMain == "light rain") {
+                $("body").css("background-image", "url('https://images.unsplash.com/photo-1475116127127-e3ce09ee84e1?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80')");
             } else if(weatherMain=="scattered clouds"){      
-                $('body').css('background-image', "url('https://i.redd.it/dfa4wy95skh01.jpg')");
-            } else if (weatherMain == "Sun") {
+                $("body").css('background-image', "url('https://images.unsplash.com/photo-1515890922410-ae767899d6b3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=934&q=80')");
+            } else if (weatherMain == "sun") {
                 $("body").css("background-image", "url('https://i.redd.it/r7399lcixa101.jpg')");
-            } else if (weatherMain == "Clear") {
+            } else if (weatherMain == "sclear") {
                 $("body").css("background-image", "url('https://i.redd.it/j4ry6otc50001.jpg')");
+            }else{
+            $("body").css("background-image", "url('https://images.unsplash.com/photo-1465146344425-f00d5f5c8f07?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=755&q=80')");
             }
         });
 </script>
+<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+
+<script>src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.4.4/cjs/popper-base.min.js"</script>
 </body>
 </html>
