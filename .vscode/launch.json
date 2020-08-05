@@ -1,0 +1,14 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Spring Boot-DemoApplication<weatherapp>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "console": "internalConsole",
+            "mainClass": "com.win.weatherapp.DemoApplication",
+            "projectName": "weatherapp",
+            "args": ""
+        }
+    ]
+}

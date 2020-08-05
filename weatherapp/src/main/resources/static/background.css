@@ -5,9 +5,18 @@ body {
 }
 
 .container {
-  background: rgba(0, 0, 0, 0.4);
-  background-image: url("https://images.unsplash.com/photo-1530292178889-67a8dc571e85?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80");
+  background-color: #ffffff;
+  /* background-image: url("https://images.unsplash.com/photo-1530292178889-67a8dc571e85?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80"); */
+  opacity: 0.6;
   background-repeat: no-repeat;
   background-size: cover;
-  color: #fff;
+}
+
+h1,
+h3,
+p,
+table {
+  color: #000000;
+  font-weight: bold;
+  /* opacity: 0.9; */
 }
